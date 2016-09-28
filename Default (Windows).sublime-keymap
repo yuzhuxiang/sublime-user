@@ -1,0 +1,278 @@
+[
+    { "keys": ["ctrl+shift+a"], "command": "expand_selection", "args": {"to": "tag"} },
+
+    // "="对齐
+    { "keys": ["ctrl+shift+alt+a"], "command": "alignment" },
+
+    // 自动补全不自动跳出来时使用
+    { "keys": ["ctrl+alt+space"], "command": "auto_complete" },
+
+	// 避免与取色快捷键冲突，改掉Convert​To​UTF8的默认快捷键
+    {
+        "keys": ["ctrl+shift++alt+g"], "command": "convert_to_utf8",
+        "args": {"encoding": "GBK", "stamp": "0" }
+    },
+
+    // CSS3自动补齐前缀
+    { "keys": ["ctrl+shift++alt+p"], "command": "autoprefixer" },
+
+
+    // 修改json pretty默认热键，emmet使用go_to_matching_pair
+    { "keys": ["ctrl+shift+alt+j"], "command": "pretty_json" },
+
+    //toggle侧边栏
+    { "keys": ["ctrl+\\"], "command": "toggle_side_bar" },
+
+    // 复制当前文件路径
+    { "keys": ["ctrl+alt+c"], "command": "copy_path" },
+
+    // 跳转到css声明及函数定义处,f12让给下面
+    { "keys": ["ctrl+alt+."], "command": "goto_definition" },
+
+    //在chrome中打开当前文件，注意路径名称\\
+    { "keys": ["f12"], "command": "side_bar_files_open_with",
+            "args": {
+                "paths": [],
+                "application": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+                "extensions":".*"
+            }
+    },
+
+    // 在行末添加“;”并换行
+    { "keys": ["ctrl+;"], "command": "run_macro_file", "args": {"file": "Packages/User/Add_Semicolon.sublime-macro"} },
+    // 行末添加“;” 下移一行回车
+    { "keys": ["ctrl+'"], "command": "run_macro_file", "args": {"file": "Packages/User/Add_Semicolon_jump.sublime-macro"} },
+    // 右移两格
+    { "keys": ["ctrl+,"], "command": "run_macro_file", "args": {"file": "Packages/User/move_rignt2.sublime-macro"} },
+
+    // 修复home/end按键只跨一行的问题
+    // Fix End of line
+    { "keys": ["end"], "command": "move_to", "args": {"to": "hardeol", "extend": false} },
+    // Fix Beginning of line
+    { "keys": ["home"], "command": "move_to", "args": {"to": "hardbol", "extend": false} },
+    // Fix end of line + select
+    { "keys": ["shift+end"], "command": "move_to", "args": {"to": "hardeol", "extend": true} },
+    // Fix beginning of line + select
+    { "keys": ["shift+home"], "command": "move_to", "args": {"to": "hardbol", "extend": true} },
+
+    // ColorHighlighter
+	{
+		"keys": ["ctrl+alt+c","c"],
+		"command": "color_picker",
+		"context": [
+			{
+				"key": "color_highlighter.color_picker"
+			}
+		]
+	},
+	{
+		"keys": ["ctrl+alt+c","a"],
+		"command": "color_convert",
+		"context": [
+			{
+				"key": "color_highlighter.color_convert"
+			}
+		]
+	},
+	{
+		"keys": ["ctrl+alt+c","p"],
+		"command": "color_convert_prev",
+		"context": [
+			{
+				"key": "color_highlighter.color_convert_prev"
+			}
+		]
+	},
+	{
+		"keys": ["ctrl+alt+c","n"],
+		"command": "color_convert_next",
+		"context": [
+			{
+				"key": "color_highlighter.color_convert_next"
+			}
+		]
+	},
+	{
+		"keys": ["ctrl+alt+c","d"],
+		"command": "go_to_var_definition",
+		"context": [
+			{
+				"key": "color_highlighter.go_to_var_definition"
+			}
+		]
+	},
+
+	// BracketHighlighter
+	// Toggle Global Enable
+    {
+        "keys": ["ctrl+alt+shift+e"],
+        "command": "bh_toggle_enable"
+    },
+    // Search to end of file for bracket
+    {
+        "keys": ["ctrl+alt+shift+b"],
+        "command": "bh_key",
+        "args":
+        {
+            "lines" : true
+        }
+    },
+    // Go to left bracket
+    {
+        "keys": ["ctrl+alt+shift+up"],
+        "command": "bh_key",
+        "args":
+        {
+            "no_outside_adj": null,
+            "no_block_mode": null,
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect",
+                "args": {"select": "left"}
+            }
+        }
+    },
+    // Go to right bracket
+    {
+        "keys": ["ctrl+alt+shift+down"],
+        "command": "bh_key",
+        "args":
+        {
+            "no_outside_adj": null,
+            "no_block_mode": null,
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect",
+                "args": {"select": "right"}
+            }
+        }
+    },
+    // Remove brackets
+    {
+        "keys": ["ctrl+alt+shift+r"],
+        "command": "bh_remove_brackets"
+    },
+    // Toggle string escape mode for sub bracket search in strings
+    {
+        "keys": ["ctrl+alt+shift+x"],
+        "command": "bh_toggle_string_escape_mode"
+    },
+    // Select text between brackets
+    {
+        "no_outside_adj": null,
+        "keys": ["ctrl+alt+shift+s"],
+        "command": "bh_key",
+        "args":
+        {
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect"
+            }
+        }
+    },
+    // Select text including brackets
+    {
+        "keys": ["ctrl+alt+shift+d"],
+        "command": "bh_key",
+        "args":
+        {
+            "no_outside_adj": null,
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect",
+                "args": {"always_include_brackets": true}
+            }
+        }
+    },
+    // Select tag name of HTML/XML tag (both opening name and closing)
+    {
+        "keys": ["ctrl+alt+shift+t"],
+        "command": "bh_key",
+        "args":
+        {
+            "plugin":
+            {
+                "type": ["cfml", "html", "angle"],
+                "command": "bh_modules.tagnameselect"
+            }
+        }
+    },
+    // Select the attribute to the right of the cursor (will wrap inside the tag)
+    {
+        "keys": ["ctrl+alt+shift+right"],
+        "command": "bh_key",
+        "args":
+        {
+            "plugin":
+            {
+                "type": ["cfml", "html", "angle"],
+                "command": "bh_modules.tagattrselect",
+                "args": {"direction": "right"}
+            }
+        }
+    },
+    // Select the attribute to the left of the cursor (will wrap inside the tag)
+    {
+        "keys": ["ctrl+alt+shift+left"],
+        "command": "bh_key",
+        "args":
+        {
+            "plugin":
+            {
+                "type": ["cfml", "html", "angle"],
+                "command": "bh_modules.tagattrselect",
+                "args": {"direction": "left"}
+            }
+        }
+    },
+    // Convert single quote string to double quoted string and vice versa
+    // Will handle escaping or unescaping quotes within the string
+    {
+        "keys": ["ctrl+alt+shift+q"],
+        "command": "bh_key",
+        "args":
+        {
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
+                "command": "bh_modules.swapquotes"
+            }
+        }
+    },
+    // Fold contents between brackets
+    {
+        "keys": ["ctrl+alt+shift+["],
+        "command": "bh_key",
+        "args":
+        {
+            "plugin": {
+                "type": ["__all__"],
+                "command" : "bh_modules.foldbracket"
+            }
+        }
+    },
+    // Swap brackets with another type
+    {
+        "keys": ["ctrl+alt+shift+c"],
+        "command": "swap_brackets"
+    },
+    // Surround selection with brackets from quick panel
+    {
+        "keys": ["ctrl+alt+shift+w"],
+        "command": "wrap_brackets"
+    },
+    // Toggle high visibility mode
+    {
+        "keys": ["ctrl+alt+shift+v"],
+        "command": "bh_toggle_high_visibility"
+    }
+]

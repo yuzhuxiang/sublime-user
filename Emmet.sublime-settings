@@ -1,0 +1,14 @@
+{
+	"snippets": {
+		"html": {
+			"abbreviations": {
+				"example": "<div class='example' title='Custom element example'>"
+			}
+		}
+	},
+
+	// If your workflow already includes an automated task for CSS vendor prefixing (such as Autoprefixer), you can disable Emmet's automatic vendor prefixes insertion adding this option to your user’s Emmet.sublime-settings file
+  	"preferences": {
+    	"css.autoInsertVendorPrefixes": true,
+  	}
+}

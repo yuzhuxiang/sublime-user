@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<script src="http://libs.baidu.com/jquery/${1:1.11.1}/jquery.min.js"></script>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>baidu</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html(.basic)</scope>
+	<description>baidu_static_jqeury</description>
+</snippet>
