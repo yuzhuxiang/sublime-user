@@ -45,6 +45,14 @@
     // 右移两格
     { "keys": ["ctrl+,"], "command": "run_macro_file", "args": {"file": "Packages/User/move_rignt2.sublime-macro"} },
 
+    // 设置窗体透明度，记笔记时方便
+    { "keys": ["ctrl+alt+shift+1"], "command": "set_opacity"},
+    { "keys": ["ctrl+alt+shift+2"], "command": "set_opacity_nine" },
+    { "keys": ["ctrl+alt+shift+3"], "command": "set_opacity_eight" },
+    { "keys": ["ctrl+alt+shift+4"], "command": "set_opacity_seven" },
+    { "keys": ["ctrl+alt+shift+5"], "command": "set_opacity_six" },
+    { "keys": ["ctrl+alt+shift+6"], "command": "set_opacity_half" },
+
     // 修复home/end按键只跨一行的问题
     // Fix End of line
     { "keys": ["end"], "command": "move_to", "args": {"to": "hardeol", "extend": false} },
