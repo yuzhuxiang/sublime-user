@@ -1,4 +1,7 @@
 [
+    // toggle auto-save
+    { "keys": ["ctrl+shift+s"], "command": "auto_save" },
+
     { "keys": ["ctrl+shift+a"], "command": "expand_selection", "args": {"to": "tag"} },
 
     // "="对齐

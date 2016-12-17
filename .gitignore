@@ -45,3 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.exe
+*.tmTheme
+encoding_cache.json
+Package Control.cache/01524fae79697630d0454ba3fabd9414
+Package Control.cache/29d18d0fa753a62714eb1d86fc40db5d
+Package Control.sublime-settings
+oscrypto-ca-bundle.crt
+Package Control.last-run
+Package Control.user-ca-bundle

@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-<link rel="stylesheet" type="text/css" href="${1:../../}css/base.css">
+<link rel="stylesheet" type="text/css" href="G:\前端\css\base.css">
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>base</tabTrigger>

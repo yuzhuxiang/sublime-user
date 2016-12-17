@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<title>${1:document}</title>
 	<style type="text/css">
-	
+
 	</style>
 	<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -16,13 +16,13 @@
 	</script>
 </head>
 <body>
-	${2:}
+	${0}
 </body>
 </html>
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>htmljq</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>text.html(.basic)</scope>
+	<scope>text.html</scope>
 	<description>html5_jquery</description>
 </snippet>

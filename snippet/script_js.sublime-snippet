@@ -1,13 +1,10 @@
 <snippet>
     <content><![CDATA[
-\$(function() {
-    ${1}
-})
+<script src="js/${1:script.js}"></script>
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>ready</tabTrigger>
+    <tabTrigger>js</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>text.html,source.js</scope>
-    <description>$(document).ready(fn)</description>
+    <scope>text.html</scope>
+    <description>script.js</description>
 </snippet>
-
